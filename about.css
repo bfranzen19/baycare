@@ -1,0 +1,64 @@
+a {
+  color: #0574af;
+}
+
+a:hover {
+  color: #577a28;
+}
+
+h2 {
+  text-shadow: 1px 1px 1px gray;
+}
+
+h3 {
+  text-shadow: 1px 1px 1px gray;
+}
+
+.module-wrapper h3 {
+  text-shadow: none;
+  font-weight: 400;
+}
+
+/*a::after {*/
+/*  content: '\0020';*/
+/*}*/
+
+/* theme settings:
+font and header font: open sans
+
+theme color: #002C77
+secondary color: #0574af
+link color: #034B8A
+
+resources enabled? yes
+
+index links:  UPDATE THESE
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics
+
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=2
+
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=3
+
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=4
+
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=5
+
+https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=6
+
+
+<!-- BACK TO INDEX BUTTON --> UPDATE HREF
+  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="">
+    <i class="icon-upleft" aria-label="back"></i>
+      <span>Back to Index</span>
+  </a>
+<!-- BACK TO INDEX BUTTON -->
+
+
+<!-- BACK TO ADDITION RESOURCES BUTTON --> UPDATE HREF
+  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="">
+    <i class="icon-upleft" aria-label="back"></i>
+      <span>Back to Additional Resources</span>
+  </a><br/><br/>
+<!-- BACK TO ADDITIONAL RESOURCES BUTTON -->
+
+*/
