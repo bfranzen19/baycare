@@ -1,13 +1,13 @@
 <!-- ST LOADING ANINAMTION CSS, STORE CONTENT, LOAD CONTENT, ANIMATION HTML -->
   <!-- BACK TO INDEX BUTTON -->
-    <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/index/index">
+    <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/index/index">
       <i class="icon-upleft" aria-label="back"></i>
         <span>Back to Index</span>
-    </a>
+    </a><br/>
   <!-- BACK TO INDEX BUTTON -->
 
   <!-- BACK TO ADDITION RESOURCES BUTTON -->
-    <!-- <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/resources/additional-resources/all">
+    <!-- <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/resources/additional-resources/all">
       <i class="icon-upleft" aria-label="back"></i>
         <span>Back to Additional Resources</span>
     </a><br/><br/> -->
@@ -84,10 +84,33 @@
       text-align: center;
     }
 
-    .module-wrapper {
-      margin: auto 1rem;
+    .site-rotator {
+      display: none;
     }
 
+    h2 + p {
+      display: inline;
+      color: black;
+    }
+
+    p + span {
+      display: inline;
+      color: black;
+    }
+
+    h3 ~ p > span {
+      display: inline;
+      color: black;
+    }
+
+    span ~ span {
+      display: inline;
+      color: black;
+    }
+
+    .right-column-wideblue {
+      display: none;
+    }
 
   </style>
 <!-- Z A LITTLE STYLE -->
@@ -96,6 +119,7 @@
   <script>
     function loadData(data){
       document.getElementById("storage").innerHTML = data;
+
         // REMOVE PROBLEMATIC ELEMENTS
         // var elementsRemove = document.getElementsById("remove");
         // var len = elementsRemove.length;
@@ -106,7 +130,7 @@
         // }
 
         // SELECT SCRAPED ELEMENTS
-        var element1 = document.getElementById("content-middle");
+        var element1 = document.getElementsByClassName("bodycontent")[0];
         var wrap1 = document.createElement('div');
         wrap1.appendChild(element1.cloneNode(true));
         element1.parentNode.removeChild(element1);
@@ -115,10 +139,10 @@
         txt = txt.replace(/class="row"/g,"");
 
         // SELECT SCRAPED ELEMENTS BASED ON CLASS NAME OR ARRAY POSITION
-        //var element2 = document.getElementsByClassName("article-content")[0];
-        //var wrap2 = document.createElement('div');
-        //wrap2.appendChild(element2.cloneNode(true));
-        //element2.parentNode.removeChild(element2);
+        // var element2 = document.getElementsByClassName("article-content")[0];
+        // var wrap2 = document.createElement('div');
+        // wrap2.appendChild(element2.cloneNode(true));
+        // element2.parentNode.removeChild(element2);
 
         // CLEAR STORAGE
         document.getElementById("storage").innerHTML = "";
@@ -135,3 +159,4 @@
 
 
 <!-- LINK TO THE PHP SCRAPER SCRIPT -->
+<script src="https://toolbox.injoyonline.com/remote/baycare/about.php"></script>

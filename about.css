@@ -1,9 +1,9 @@
 a {
-  color: #0574af;
+  color: #034B8A;
 }
 
 a:hover {
-  color: #577a28;
+  color: #0574af;
 }
 
 h2 {
@@ -14,10 +14,6 @@ h3 {
   text-shadow: 1px 1px 1px gray;
 }
 
-.module-wrapper h3 {
-  text-shadow: none;
-  font-weight: 400;
-}
 
 /*a::after {*/
 /*  content: '\0020';*/
@@ -33,21 +29,21 @@ link color: #034B8A
 resources enabled? yes
 
 index links:  UPDATE THESE
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics
 
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=2
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics?page=2
 
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=3
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics?page=3
 
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=4
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics?page=4
 
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=5
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics?page=5
 
-https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehigh-valley-health-network/organization-details/department-of-obstetrics?page=6
+https://www.injoyonline.com/learn/course/services-information-baycare-demo/organization-details/department-of-obstetrics?page=6
 
 
 <!-- BACK TO INDEX BUTTON --> UPDATE HREF
-  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="">
+  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/index/index">
     <i class="icon-upleft" aria-label="back"></i>
       <span>Back to Index</span>
   </a>
@@ -55,7 +51,7 @@ https://www.injoyonline.com/learn/course/services-information-lehigh-valley-lehi
 
 
 <!-- BACK TO ADDITION RESOURCES BUTTON --> UPDATE HREF
-  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="">
+  <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/resources/additional-resources/all">
     <i class="icon-upleft" aria-label="back"></i>
       <span>Back to Additional Resources</span>
   </a><br/><br/>
