@@ -1,6 +1,6 @@
 <?php
 // URL to scrape
-  $url = "https://baycare.org/hospitals";
+  $url = "https://baycare.org/services";
 
 // SCRAPER
   $curl = curl_init($url);
@@ -12,15 +12,15 @@
 
 // CHANGE PROBLEMATIC STRINGS
   $data = str_replace('href="/', 'href="https://baycare.org/', $data);
-  // $data = str_replace('<h2', '<h3', $data);
-  // $data = str_replace('</h2>', '</h3>', $data);
-  $data = str_replace('src="/','src="https://baycare.org/',$data);
-
+  $data = str_replace('<h2', '<h3', $data);
+  $data = str_replace('</h2>', '</h3>', $data);
+  $data = str_replace('<h1', '<h3', $data);
+  $data = str_replace('</h1>', '</h3>', $data);
 
 // BREAK SCRIPTS
 // strips all tags EXCEPT for tags listed to the right (second input). if it's removed from
 // the second input, it's going to be stripped.
-  $data = strip_tags($data, "<img><table><tbody><tr><td><style><span><a><p><br><hr><h1><h2><h3><h4><h5><h6><div><ul><li>");
+  $data = strip_tags($data, "<table><tbody><tr><td><style><span><a><p><br><hr><h1><h2><h3><h4><h5><h6><div><ul><li>");
 
 // ECHO DATA TO JS SCRIPT IN HTML FILE
   echo "loadData(".json_encode($data).")";
