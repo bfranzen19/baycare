@@ -1,0 +1,165 @@
+<!-- ST LOADING ANINAMTION CSS, STORE CONTENT, LOAD CONTENT, ANIMATION HTML -->
+  <!-- BACK TO INDEX BUTTON -->
+    <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/index/index">
+      <i class="icon-upleft" aria-label="back"></i>
+        <span>Back to Index</span>
+    </a><br/>
+  <!-- BACK TO INDEX BUTTON -->
+
+  <!-- BACK TO ADDITION RESOURCES BUTTON -->
+    <!-- <a style="float:right;" class="ember-view btn btn--link btn--small ij-index-link" href="https://www.injoyonline.com/learn/course/services-information-baycare-demo/resources/additional-resources/all">
+      <i class="icon-upleft" aria-label="back"></i>
+        <span>Back to Additional Resources</span>
+    </a><br/><br/> -->
+  <!-- BACK TO ADDITIONAL RESOURCES BUTTON -->
+
+  <!-- Start Loading Animation CSS -->
+    <style>
+      .ij-spinner {
+        margin: 100px auto 0;
+        width: 70px;
+        text-align: center;
+      }
+
+      .ij-spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #656565;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      }
+
+      .ij-spinner .ij-bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+
+      .ij-spinner .ij-bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+
+      @keyframes sk-bouncedelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+        }
+      }
+    </style>
+  <!-- End Loading Animation CSS -->
+
+  <!-- Start Store Remote Page Content -->
+    <div style="display:none;" id="storage"><?php echo $data; ?></div>
+  <!-- End Store Remote Page Content -->
+
+  <!-- Start Load Select Page Content -->
+    <div style="display:none;" id="pageContents"></div>
+  <!-- End Load Select Page Content -->
+
+  <!-- Start Loading Animation HTML -->
+    <div id="loadingAnimation">
+        <div class="ij-spinner">
+          <div class="ij-bounce1"></div>
+          <div class="ij-bounce2"></div>
+          <div class="ij-bounce3"></div>
+        </div>
+    </div>
+  <!-- End Loading Animation HTML -->
+<!-- Z LOADING ANINAMTION CSS, STORE CONTENT, LOAD CONTENT, ANIMATION HTML -->
+
+<!-- ST A LITTLE STYLE -->
+  <style>
+    #pageContents::before {
+      content: "Bonding with Your Baby";
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      color: #002C77;
+      text-shadow: 1px 1px 1px white, 1px 1px 2px gray;
+    }
+
+    #pageContents {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    a {
+      color: #034B8A;
+    }
+
+    a:hover {
+      color: #0574af;
+    }
+
+    a:visted {
+      color: #002C77;
+    }
+
+    li {
+      /*list-style: none;*/
+      list-style-type: circle;
+      margin-left: 2rem;
+    }
+
+
+  </style>
+<!-- Z A LITTLE STYLE -->
+
+<!-- ST INITIALIZE PHP SCRIPT, RECIEVE, AND PROCESS SCRAPED DATA -->
+  <script>
+    function loadData(data){
+      document.getElementById("storage").innerHTML = data;
+
+        // REMOVE PROBLEMATIC ELEMENTS
+        // var elementsRemove = document.getElementsById("remove");
+        // var len = elementsRemove.length;
+        // var x;
+        // for (x=0; x<len; x++){
+        //   console.log("remove elements triggered");
+        //   elementsRemove[x].innerHTML = "";
+        // }
+
+        // SELECT SCRAPED ELEMENTS
+        var element1 = document.getElementsByClassName("bodycontent")[0];
+        var wrap1 = document.createElement('div');
+        wrap1.appendChild(element1.cloneNode(true));
+        element1.parentNode.removeChild(element1);
+
+        var txt = wrap1.innerHTML;
+        txt = txt.replace(/class="row"/g,"");
+
+        // SELECT SCRAPED ELEMENTS BASED ON CLASS NAME OR ARRAY POSITION
+        // var element2 = document.getElementsByClassName("article-content")[0];
+        // var wrap2 = document.createElement('div');
+        // wrap2.appendChild(element2.cloneNode(true));
+        // element2.parentNode.removeChild(element2);
+
+        // CLEAR STORAGE
+        document.getElementById("storage").innerHTML = "";
+
+        // Load Selected Elements
+        // document.getElementById("pageContents").innerHTML = data;
+        document.getElementById("pageContents").innerHTML = txt;
+        document.getElementById("loadingAnimation").innerHTML = "";
+        document.getElementById("loadingAnimation").style.display = "none";
+        document.getElementById("pageContents").style.display = "";
+      }
+  </script>
+<!-- Z INITIALIZE PHP SCRIPT, RECIEVE, AND PROCESS SCRAPED DATA -->
+
+
+<!-- LINK TO THE PHP SCRAPER SCRIPT -->
+<script src="https://toolbox.injoyonline.com/remote/baycare/bonding.php"></script>
