@@ -14,6 +14,20 @@ h3 {
   text-shadow: 1px 1px 1px gray;
 }
 
+/*
+a {
+  color: #034B8A;
+}
+
+a:hover {
+  color: #0574af;
+}
+
+a:visted {
+  color: #002C77;
+}
+*/
+
 
 /*a::after {*/
 /*  content: '\0020';*/
