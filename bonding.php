@@ -1,6 +1,6 @@
 <?php
 // URL to scrape
-  $url = "https://baycare.org/services/maternity/resources/during-your-stay/birth-certificates";
+  $url = "https://baycare.org/services/maternity/resources/during-your-stay/bonding-with-your-baby";
 
 // SCRAPER
   $curl = curl_init($url);
