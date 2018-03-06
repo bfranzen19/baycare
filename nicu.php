@@ -1,6 +1,6 @@
 <?php
 // URL to scrape
-  $url = "https://baycare.org/services/maternity/resources/during-your-stay/breastfeeding";
+  $url = "https://baycare.org/services/maternity/resources/intensive-care-for-newborns";
 
 // SCRAPER
   $curl = curl_init($url);
@@ -12,8 +12,6 @@
 
 // CHANGE PROBLEMATIC STRINGS
   $data = str_replace('href="/', 'href="https://baycare.org/', $data);
-  $data = str_replace('<h2', '<h3', $data);
-  $data = str_replace('</h2>', '</h3>', $data);
 
 // BREAK SCRIPTS
 // strips all tags EXCEPT for tags listed to the right (second input). if it's removed from
