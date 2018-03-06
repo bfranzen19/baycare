@@ -80,8 +80,14 @@
 
 <!-- ST A LITTLE STYLE -->
   <style>
+    #pageContents {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
     h2 {
       text-align: center;
+      margin-bottom: 0.5rem;
     }
 
     .site-rotator {
@@ -99,8 +105,14 @@
     }
 
     h3 ~ p > span {
+      display: block;
+      margin-left: 2rem;
+    }
+
+    .super-fix {
       display: inline;
-      color: black;
+      padding: 0;
+      margin: 0;
     }
 
     span ~ span {
@@ -110,6 +122,73 @@
 
     .right-column-wideblue {
       display: none;
+    }
+
+    h2 {
+      padding-top: 1.5rem;
+    }
+
+    p:nth-of-type(4) {
+      display: none;
+    }
+
+    p + span {
+      display: none;
+    }
+
+    p:nth-of-type(5) {
+      margin: 0;
+      padding-bottom: 0.2rem;
+    }
+
+    span > span {
+      color: black;
+      font-weight: normal;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    p + span > br + span {
+      margin: auto 5rem 0 3rem;
+      padding-bottom: 0;
+      color: black;
+      font-weight: normal;
+    }
+
+    p:nth-of-type(6) > a {
+      color: #034B8A;
+      padding-top: 0;
+      margin-top: 0;
+      margin-left: 3rem;
+    }
+
+    p:nth-of-type(6) > a:hover {
+      color: #0574af;
+    }
+
+    p:nth-of-type(6) > a:visted {
+      color: #002C77;
+    }
+
+    p:nth-of-type(6) + h2 {
+      padding: 0;
+      margin: 3rem 0 0 0;
+      font-size: 1.15rem;
+    }
+
+    p:nth-of-type(6) + h2 + h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    p + h3 {
+      display:  none;
+    }
+
+
+    p + span {
+      color: red;
     }
 
   </style>
