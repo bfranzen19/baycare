@@ -102,12 +102,7 @@
       margin-top: 2rem;
     }
 
-    .bodycontent > p:nth-of-type(2) > a:first-of-type {
-      margin-left: 0;
-    }
-
     a {
-      margin-left: 2rem;
       color: #034B8A;
     }
 
@@ -119,12 +114,59 @@
       color: #002C77;
     }
 
-    p:nth-of-type(4) {
-      display: hidden;
-      line-height: 0;
-      margin: 0;
-      padding: 0;
+    h1 {
+      display: none;
     }
+
+    ul > li {
+      list-style: none;
+    }
+
+    ul > li > a {
+      margin-left: 1rem;
+    }
+
+    ul + p {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .bodycontent > p:nth-of-type(3) {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      margin-top: 1.25rem;
+    }
+
+    li > ul > li {
+      margin-left: 1.5rem;
+    }
+
+    ul > li > li {
+      margin-left: 1.5rem;
+    }
+
+    tr > td:nth-of-type(2) {
+      width: 25%;
+    }
+
+    tr {
+      margin-bottom: 3rem;
+    }
+
+  /* HIDING IMAGES ON MOBILE */
+    @media screen and (max-width: 750px){
+      td:nth-of-type(even) {
+        display: none !important;
+      }
+
+      table {
+        margin: auto;
+        width:100%;
+        float: left;
+      }
+    }
+  /* HIDING IMAGES ON MOBILE */
 
   </style>
 <!-- Z A LITTLE STYLE -->
@@ -173,4 +215,4 @@
 
 
 <!-- LINK TO THE PHP SCRAPER SCRIPT -->
-<script src="https://toolbox.injoyonline.com/remote/baycare/AddRes_news.php"></script>
+<script src="https://toolbox.injoyonline.com/remote/baycare/AddRes_leadership.php"></script>
