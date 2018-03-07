@@ -16,6 +16,12 @@
   // $data = str_replace('</h2>', '</h3>', $data);
   $data = str_replace('src="/','src="https://baycare.org/',$data);
 
+  // replace table elements
+  // $data = str_replace('<tbody', '<div class="table"', $data);
+  // $data = str_replace('<tr', '<div class="trow"', $data);
+  // $data = str_replace('</tr>', '</div>', $data);
+  // $data = str_replace('<td', '<div class="cell"', $data);
+  // $data = str_replace('</td>', '</div>', $data);
 
 // BREAK SCRIPTS
 // strips all tags EXCEPT for tags listed to the right (second input). if it's removed from
